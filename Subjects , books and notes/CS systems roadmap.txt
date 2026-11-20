@@ -1,0 +1,182 @@
+**محاور تأسيسية مؤجلة للدراسة الذاتية والتعمق (Foundation Roadmap):**
+
+**المحور الأول: تصميم الدوائر المنطقية والعمليات الحسابية (Digital Logic Design & Computer Arithmetic)**
+* **الجبر البوليني (Boolean Algebra):** العمليات الأساسية (AND, OR, NOT) والعمليات المشتقة (NAND, NOR, XOR, XNOR) وقوانين دي مورغان وتبسيط الدوال.
+* **دوائر المنطق التوافقي (Combinational Logic):**
+  * دوائر الجمع الثنائي (Half Adder و Full Adder) وبناء مصفوفة الجمع التتابعي (Ripple-Carry Adder).
+  * أدوات التوجيه والعنونة: مفكك الترميز (Address Decoder) والموزع/المنتخب (Multiplexer - MUX).
+  * بناء نواة وحدة الحساب والمنطق البسيطة (Basic ALU Construction) والتحكم في نوع العملية.
+* **دوائر المنطق التتابعي (Sequential Logic):**
+  * آلية تخزين البت (0 و 1) وحفظ الحالة عبر عناصر التغذية الراجعة (Latches & Flip-Flops).
+  * بناء المسجلات (Registers)، سجلات الإزاحة (Shift Registers)، والعدادات الرقمية ومفاهيم مصفوفة الذاكرة الأولية.
+
+**المحور الثاني: أنظمة العد والتمثيل الرقمي للبيانات (Number Systems & Data Representation)**
+* **التحويل بين أنظمة العد والقواعد:**
+  * الأنظمة: الثنائي (Base 2)، الثماني (Base 8)، العشري (Base 10)، والست عشري (Base 16).
+  * مهارة التحويل المباشر بين الثنائي والست عشري (مجموعات الـ 4-bit / Nibble).
+* **تمثيل الأعداد الصحيحة والإشارة:**
+  * طريقة المتمم الثنائي (Two's Complement) وكيفية توحيد دارات الجمع والطرح على مستوى العتاد.
+  * دراسة ظاهرة فيضان الأرقام (Arithmetic Overflow & Underflow) وتأثيرها على منطق البرمجة.
+* **تمثيل الأعداد الكسرية والفاصلة العائمة:**
+  * معيار IEEE 754 لتمثيل الأرقام العشرية (float و double) بشقوقه الثلاثة: (Sign, Exponent, Mantissa).
+  * فهم حدود الدقة الرياضية (Precision Errors) ومشاكل التقريب التراكمي (Round-off Accumulation).
+
+**المحور الثالث: مشروع التطبيق العملي - بناء آلة حاسبة من الصفر (Calculator Capstone Project)**
+* **المستوى الأول (محاكاة عتادية - Hardware Simulation):**
+  * محاكاة دوائر العمليات الحسابية والمنطقية (جمع، طرح، ضرب، مقارنات) باستخدام البوابات المنطقية المنفصلة دون استدعاء أي معاملات حسابية جاهزة في اللغة.
+* **المستوى الثاني (برمجي بـ ++C):**
+  * بناء آلة حاسبة برمجية لمعالجة التعابير الرياضية المعقدة.
+  * تطبيق خوارزمية تفكيك وترتيب الأولويات (Shunting-yard Algorithm) لتحويل التعابير من (Infix) إلى (Postfix).
+  * استخدام تراكيب البيانات (Stacks & Queues) لتقييم النتيجة بدقة والتعامل مع الأقواس وحالات القسمة على صفر.
+
+
+**المحور الرابع: التشريح المعماري للعتاد وميكانيكا النظم (Detailed Hardware Architecture & System Mechanics)**
+
+1. هندسة وحدة المعالجة المركزية (CPU Microarchitecture):
+   * دورة التعليمات التفصيلية وتعدد المسارات: (Instruction Cycle: Fetch, Decode, Execute, Memory Access, Write-back).
+   * خطوط الأنابيب والتنفيذ المتوازي: (Instruction Pipelining, Hazards & Branch Prediction).
+   * تنظيم المسجلات وتصنيفها: (General-Purpose vs. Special-Purpose Registers: Accumulator, PC, IR, SP).
+   * مجموعات التعليمات: المعمارية المختزلة والمعقدة (RISC vs. CISC Architectures).
+
+2. هندسة الذاكرة وهرمية التخزين (Memory Systems & Hierarchy):
+   * فيزياء خلايا الذاكرة: الفارق العتادي بين الذاكرة الساكنة والديناميكية (SRAM vs. DRAM: Latches vs. Capacitors & Refresh Cycles).
+   * معمارية الكاش ومستوياته: (CPU Cache Architecture: L1, L2, L3 Caches, Cache Lines, Hit/Miss Penalty).
+   * سياسات إدارة الذاكرة الخفية: (Cache Mapping: Direct, Fully Associative, Set-Associative & Coherence Protocols).
+   * الذاكرة الافتراضية والصفحات: (Virtual Memory, Paging, Page Tables, and Translation Lookaside Buffer - TLB).
+
+3. نواقل النظام ومتحكمات الإدخال والإخراج (System Buses & I/O Subsystems):
+   * البنية الهندسية لنواقل النظام: (Bus Topology: Address Bus Width, Data Bus Bandwidth, Control Signals).
+   * بروتوكولات الاتصال والمنافذ: (PCIe Lanes, SATA vs. NVMe Protocol over PCIe).
+   * آليات الاتصال بالمعالج:
+     * الاستطلاع البرمجي: (Programmed I/O & Polling).
+     * المقاطعات العتادية: (Interrupt-Driven I/O & Interrupt Request Lines - IRQ).
+     * الوصول المباشر للذاكرة: (Direct Memory Access - DMA) لنقل البيانات دون إشغال المعالج.
+
+4. فيزياء وسائط التخزين الثانوي (Secondary Storage Mechanics):
+   * محركات الأقراص المغناطيسية (HDD): الأطباق، رؤوس القراءة والكتابة، قطاعات التخزين، وأزمنة التأخير (Seek Time, Rotational Latency).
+   * محركات الحالة الصلبة (SSD & Flash Memory): خلايا NAND Flash (SLC, MLC, TLC, QLC)، البوابات العائمة (Floating Gate vs. Charge Trap)، ودور متحكم القرص (Flash Translation Layer - FTL & Wear Leveling).
+
+
+
+   **المحور الخامس: هندسة نظم التشغيل وإدارة الموارد (Operating Systems & Kernel Architecture)**
+* نواة نظام التشغيل (The OS Kernel):
+  * المفاهيم: معمارية النواة الأحادية والمصغرة (Monolithic vs. Microkernel).
+  * نمط المستخدم مقابل نمط النواة (User Mode vs. Kernel Mode) وحماية العتاد.
+  * نداءات النظام (System Calls): آلية تخاطب البرامج مع النواة لطلب الخدمات.
+* إدارة المعالج والعمليات (Process & CPU Management):
+  * مفهوم العملية مقابل الخيط (Process vs. Thread).
+  * دورة حياة العملية ومسجّل التحكم (Process Control Block - PCB).
+  * تبديل السياق (Context Switching) وكلفته الزمنية على المعالج.
+* إدارة الذاكرة المتقدمة (Advanced Memory Management):
+  * الذاكرة الافتراضية وتقسيم الصفحات (Virtual Memory & Paging).
+  * استبدال الصفحات وفخ خطأ الصفحة (Page Faults & Page Replacement Policies).
+  * تجزئة الذاكرة الداخلية والخارجية (Internal & External Fragmentation).
+* أنظمة الملفات والتخزين الثانوي (File Systems & Storage Management):
+  * تنظيم الملفات وعنونة الكتل (File Allocation Tables - FAT vs. Inodes in Ext4/NTFS).
+  * هيكلية المجلدات وطرق حجز مساحات التخزين (Contiguous, Linked, Indexed Allocation).
+  * التخزين المؤقت للإدخال والإخراج (I/O Buffering & Caching) لتسريع التعامل مع الأقراص.
+
+**المحور السادس: الخوارزميات المتقدمة وتصميم الحلول (Advanced Algorithms & Beyond Data Structures)**
+* خوارزميات جدولة المعالج (CPU Scheduling Algorithms):
+  * خوارزمية الأسبقية لمن يحضر أولاً (First-Come, First-Served - FCFS).
+  * خوارزمية المهمة الأقصر أولاً (Shortest Job First - SJF).
+  * خوارزمية المشاركة الزمنية الدائرية (Round Robin - RR).
+* خوارزميات التزامن ومنع الاختناق (Concurrency & Deadlock Resolution):
+  * مشكلة السباق وتضارب الموارد (Race Conditions & Critical Section Problem).
+  * أدوات التزامن: الأقفال والسيمافور (Locks, Mutexes, Semaphores).
+  * خوارزميات كشف ومنع الجمود/الاختناق (Deadlock Detection & Banker's Algorithm).
+* استراتيجيات تصميم الخوارزميات العامة (Algorithmic Paradigms):
+  * المنهج الجشع (Greedy Algorithms): متى نختار الحل الأفضل محلياً؟
+  * البرمجة الديناميكية (Dynamic Programming): تخزين الحلول الجزئية لتجنب تكرار الحسابات (Memoization & Tabulation).
+  * التراجع الخلفي والبحث المنظم (Backtracking & Branch-and-Bound).
+* تحليل الكفاءة والتعقيد النظري (Computational Complexity & Intractability):
+  * تصنيف المسائل الحسابية: P مقابل NP والمسائل المستعصية (NP-Complete & NP-Hard).
+  * تقييم استهلاك الذاكرة مقابل استهلاك الوقت (Time-Space Trade-off).
+
+
+  **المحور السابع: هندسة وتصميم المترجمات (Compiler Design & Code Generation)**
+* مراحل التحليل الأمامي (Compiler Front-End):
+  * التحليل المعجمي (Lexical Analysis): تقطيع الكود النصي إلى وحدات دلالية (Tokens) باستخدام أدوات التعبير النمطي (Regex & Finite Automata).
+  * التحليل النحوي وبناء الشجرة (Syntax Analysis & Parsing): مطابقة القواعد وتشييد شجرة القواعد المجردة (Abstract Syntax Tree - AST).
+  * التحليل الدلالي (Semantic Analysis): فحص صحة الأنواع (Type Checking) والتحقق من النطاقات المكانية للمتغيرات (Scope Resolution).
+* مراحل التحسين والتوليد الخلفي (Back-End & Optimization):
+  * التمثيل البيني المستقل (Intermediate Representation - IR): مثل بنية LLVM IR لتحويل المنطق إلى كود وسيط مجرد من نوع المعالج.
+  * خوارزميات تحسين الكود (Optimization Techniques): مثل إزالة الأكواد الميتة (Dead Code Elimination) وتوسيع الدوال السريعة (Loop Unrolling & Inlining).
+  * توليد شفرة الآلة النهائية (Target Machine Code Generation): تسكين المتغيرات داخل مسجلات المعالج المحدودة (Register Allocation).
+
+**المحور الثامن: تنسيقات الملفات الثنائية، الربط، والمحملات (Binary Formats, Linkers & Loaders)**
+* تشريح الملفات الغرضية والتنفيذية (Binary Executable Formats):
+  * فهم بنية ملفات ELF في أنظمة Linux، وبنية ملفات PE (.exe و .obj) في أنظمة Windows.
+  * أقسام الذاكرة داخل الملف الثنائي: قسم الأوامر البرمجية (.text)، البيانات المهيأة (.data)، البيانات الصفرية (.bss)، والبيانات الثابتة للقراءة فقط (.rodata).
+* هندسة الربط وحل الرموز (Linking & Symbol Resolution):
+  * جدول الرموز (Symbol Table): كيف يُسجل الرابط أسماء الدوال والمتغيرات العامة والخاصة.
+  * عملية إعادة التوطين وعنونة الفجوات (Relocation Process): كيف يقوم الرابط بتعديل عناوين القفز (Jump/Call Addresses) لربط كودك بالمكتبات.
+  * الربط الثابت مقابل الربط الديناميكي (Static Linking vs. Dynamic Linking):
+    * المكتبات الثابتة (.lib و .a) ودمج الكود بالكامل داخل الملف التنفيذي.
+    * المكتبات الديناميكية التشاركية (.dll و .so) واستدعاؤها في الذاكرة أثناء التشغيل.
+* آليات المُحمّل وبيئة التشغيل (OS Loader & Runtime Environment):
+  * كيفية قيام نواة النظام بقراءة ترويسة الملف التنفيذي (PE/ELF Header) وحجز فضاء العنونة الافتراضي.
+  * الرابط الديناميكي أثناء التشغيل (Runtime Dynamic Linker): جلب ملفات .dll المطلوبة إلى الـ RAM وحل مؤشراتها اللحظية.
+  
+
+  **المحور التاسع: هندسة أنظمة البناء وأدوات فحص الجودة (Build Systems & Code Sanitizers)**
+
+* **أتمتة بناء المشاريع متعددة الملفات (Multi-File Build Automation):**
+* فهم قصور الترجمة اليدوية عند تقسيم المشروع إلى ملفات ترويسة (`.h`) وملفات مصدرية (`.cpp`).
+* تعلم أساسيات أداة البناء القياسية (`CMake`) لإدارة الاعتماديات وتوليد ملفات البناء عبر مختلف أنظمة التشغيل.
+
+
+* **أدوات تعقيم الذاكرة والتحليل الديناميكي (Runtime Sanitizers):**
+* استخدام أداة كشف أخطاء الذاكرة (`AddressSanitizer - ASan`) لاكتشاف تسرب الذاكرة وتجاوز حدود المصفوفات لحظياً.
+* استخدام أداة كشف السلوك غير المعرّف (`UndefinedBehaviorSanitizer - UBSan`) لالتقاط الأخطاء المنطقية الخفية أثناء التشغيل.
+* تفعيل الفاحصات الساكنة (`Clang-Tidy`) لتحسين جودة الكود وتطبيق معايير ++C الحديثة.
+
+
+
+**المحور العاشر: التنقيح العميق وقراءة لغة التجميع (Low-Level Debugging & Assembly Inspection)**
+
+* **التنقيح المنهجي للعمليات (Interactive Debugging):**
+* إتقان استخدام المنقحات (`GDB` أو `LLDB` أو منقح بيئة التطوير) لوضع نقاط التوقف (`Breakpoints`) وتتبع تنفيذ الكود سطراً بسطر.
+* فحص إطار المكدس (`Stack Frame`) ومراقبة تغيّر قيم المتغيرات وعناوينها في الذاكرة الحية (`Memory Inspection`).
+
+
+* **ربط كود ++C بتعليمات المعالج (C++ to Assembly Mapping):**
+* استخدام أداة (`Compiler Explorer`) لرؤية كيف يترجم المترجم الحلقات، الشروط، واستدعاء الدوال إلى تعليمات معالج فعلية (`x86-64` أو `ARM`).
+* فهم اتفاقيات استدعاء الدوال (`Calling Conventions`) وكيفية تمرير المعاملات عبر المسجلات والمكدس.
+
+
+* **قياس الأداء واكتشاف الاختناقات (Performance Profiling):**
+* استخدام أدوات القياس (`perf` أو `Valgrind`) لتحديد الأجزاء البطيئة في الكود وقياس معدلات إخفاق الذاكرة المخبئية (`Cache Misses`).
+
+
+
+**المحور الحادي عشر: أمان الذاكرة والسلوك غير المعرّف (Memory Safety & Undefined Behavior)**
+
+* **تشريح السلوك غير المعرّف (`Undefined Behavior - UB`):**
+* فهم الحالات التي يتركها معيار ISO C++ دون تعريف (مثل قراءة متغير غير مهيأ، القسمة على صفر، والفيض الرقمي للأعداد ذات الإشارة).
+* إدراك كيف تستغل المترجمات الحديثة افتراض خلو الكود من الـ `UB` لتنفيذ تحسينات عدوانية (`Aggressive Optimizations`) قد تغيّر منطق البرنامج.
+
+
+* **أخطاء إدارة الذاكرة الشائعة (Memory Corruption Bugs):**
+* فهم آلية حدوث فيضان المكدس (`Stack Buffer Overflow`) عند الكتابة خارج حدود المصفوفات.
+* التمييز بين أخطاء الذاكرة الديناميكية (`Heap`): تسرب الذاكرة (`Memory Leaks`)، واستخدام الذاكرة بعد تحريرها (`Use-After-Free`).
+
+
+
+**المحور الثاني عشر: أساسيات برمجة الشبكات وبروتوكولات الاتصال (Network Architecture & Socket Programming)**
+
+* **معمارية الاتصال الشبكي (Network Protocol Stack):**
+* فهم طبقات نموذج `TCP/IP` وكيفية انتقال البيانات من التطبيق عبر الشبكة.
+* المقارنة الهندسية بين بروتوكول النقل الموثوق (`TCP`) وبروتوكول النقل السريع غير الموثوق (`UDP`) ومتى يُستخدم كل منهما.
+
+
+* **تمثيل البيانات عبر الشبكة (Serialization & Endianness):**
+* فهم مشكلة اختلاف ترتيب البايتات في الذاكرة بين المعالجات (`Big-Endian` مقابل `Little-Endian`) وتحويلها قياسياً (`htonl` / `ntohl`).
+* آلية تحويل البيانات والكائنات في الذاكرة إلى تيار بايتات قابل للإرسال والاستقبال (`Binary Serialization`).
+
+
+* **البرمجة المباشرة للمقابس (Sockets Programming in C++):**
+* بناء تطبيق عميل وخادم بسيط (`Client-Server Model`) باستخدام واجهات نظام التشغيل (`POSIX Sockets` أو `Winsock`) لفهم كيفية تواصل البرامج عبر الشبكة عملياً.
+
+
+
