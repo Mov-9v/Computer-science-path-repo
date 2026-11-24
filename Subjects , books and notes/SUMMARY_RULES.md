@@ -12,10 +12,11 @@ This document defines the standard rules for building, organizing, and formattin
   - **No Unused Assets:** Code or text-only screenshots must be transcribed into Markdown/code blocks and removed from `assets/`.
 
 ## 2. Text Review, Phrasing & Restructuring
-- **Active Editing & Rewriting Authority:** Always review raw input text and you have full authority to refine, polish, and rewrite phrasing (into clean, formal engineering Arabic/English matching the rest of the guide) rather than pasting colloquial or rough text verbatim:
+- **Active Editing & Book-Grade Tone:** Always review raw input text and rewrite it into timeless, authoritative textbook/reference prose (formal engineering Arabic/English):
+  - **Strip AI/Chat Artifacts:** Remove any conversational filler, meta-commentary about prompts/sources (e.g., `"النص ذكر..."`, `"كما طلبتم"`, `"هذا هو الجزء الذي كان غامضاً"`, `"في هذا الرد"`, `[cite: ...]`, `"هل ننتقل..."`), and second-person chat phrasing, turning them into clean, objective book prose.
   - Convert inline enumerations and `Term: description` definitions into clean bulleted (`-`) or numbered (`1.`) lists.
   - Convert standalone sub-topic lines into `####` subheadings.
-  - Group related points under clear subheadings and tables, and remove any conversational/chat filler or duplicated blocks.
+  - Group related points under clear subheadings and tables.
 - **Bold Technical Terms:** Highlight key concepts, definitions, and bilingual technical terms (e.g., `**المترجم (Compiler)**`, `**الذاكرة العشوائية (RAM)**`) in **bold**.
 - **No Full-Paragraph Bold:** Do not wrap entire multi-line prose paragraphs in `**...**`.
 

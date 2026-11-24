@@ -34,6 +34,7 @@ These study notes provide an independent technical breakdown of C++ fundamentals
     - [Object-Oriented Programming (OOP)](#object-oriented-programming-oop) *(Original p. 56)*
     - [Building Blocks Before Object-Oriented Design](#building-blocks-before-object-oriented-design) *(Original p. 56)*
     - [ANSI/ISO Standard C++](#ansiiso-standard-c) *(Original p. 57)*
+  - [Chapter 01 Summary & Key Takeaways](#chapter-01-summary-key-takeaways)
 
 ---
 
@@ -450,15 +451,11 @@ int totalScore = currentScore;
 
 - **ترانزستور (Transistor):** يعمل كبوابة عزل إلكترونية تُفتح عند تفعيل Wordline لقراءة الشحنة أو تحديثها.
 
----
-
-**Page 18**
-
 بسبب التسريب الكهربائي الطبيعي للمكثفات المجهرية خلال أجزاء من الألف من الثانية، تُجري دوائر الذاكرة آلاف العمليات في الثانية لقراءة الشحنات وإعادة شحنها فيما يُعرف بـ **دورات الإنعاش (Refresh Cycles)**؛ وبمجرد انقطاع التيار تتوقف دورات الإنعاش وتتفرغ المكثفات فوراً.
 
 ---
 
-**Page 19**
+**Page 18**
 
 <p align="center">
   <img src="assets/image8.png" alt="CPU Components Diagram" />
@@ -482,7 +479,7 @@ int totalScore = currentScore;
 
 ---
 
-**Page 20**
+**Page 19**
 
 #### <span style="color:#6C3483">إثراءات هندسية مكملة: القوالب العتادية، العنونة، ووحدات القياس الثنائية</span>
 
@@ -494,7 +491,7 @@ int totalScore = currentScore;
 
 ---
 
-**Page 21**
+**Page 20**
 
 - **البت، البايت، والهندسة الرياضية للمضاعفات الثنائية (Binary Abstraction & Units):**
   - **البت (Bit - Binary Digit):** هو الذرة الأولية في النظام الرقمي، ويمثل حالة نبضة كهربائية واحدة (`0` أو `1`).
@@ -510,7 +507,7 @@ $$
 
 ---
 
-**Page 22**
+**Page 21**
 
 ### <span style="color:#117864">Secondary storage</span>
 
@@ -536,7 +533,7 @@ Because executable programs and operational data must be loaded into main memory
 
 ---
 
-**Page 23**
+**Page 22**
 
 #### <span style="color:#6C3483">3. المفاضلة في هرمية الذاكرة (The Memory Hierarchy Trade-off)</span>
 
@@ -573,7 +570,7 @@ For a computer to perform a useful task, it must be able to take in data and pro
 
 ---
 
-**Page 24**
+**Page 23**
 
 ## <span style="color:#2874A6">Software</span>
 
@@ -619,7 +616,7 @@ Because a single 8-bit byte represents only $256$ distinct values—accommodatin
 
 ---
 
-**Page 25**
+**Page 24**
 
 - **المبحث الثالث:** أفق الـ 8 بت بين البيانات الأولية والمركبة
 
@@ -637,7 +634,7 @@ Because a single 8-bit byte represents only $256$ distinct values—accommodatin
 
 ---
 
-**Page 26**
+**Page 25**
 
 Character Encoding and Binary Representation
 
@@ -675,9 +672,13 @@ Computing history is characterized by the progressive abstraction of computer in
 
 **Third Generation: High-Level Languages (Portable & Human-Centric)** The transition to **high-level languages** (such as C++, Java, and C#) allowed programmers to write code using natural language and standard mathematical notation, abstracting away the underlying hardware entirely. Instead of writing dozens of low-level assembly lines, a calculation can be written as a simple, self-explanatory statement: wages = rate * hours;. To run this code on physical hardware, it must be translated into machine language by a program called a **compiler**. This compilation process delivers **portability**: the same source code can be compiled and executed on entirely different computer systems without revision, as the compiler handles the hardware-specific translation.
 
+<p align="center">
+  <img src="assets/ch1_language_layers.jpg" alt="Programming Language Abstraction Layers" />
+</p>
+
 ---
 
-**Page 27**
+**Page 26**
 
 #### <span style="color:#6C3483">1. الجيل الأول: لغة الآلة (Machine Language) - "لغة الكهرباء الخام"</span>
 
@@ -709,7 +710,7 @@ Computing history is characterized by the progressive abstraction of computer in
 
 ---
 
-**Page 28**
+**Page 27**
 
 #### <span style="color:#6C3483">ملخص مصطلحات الأجيال والتراجم (Key Terminology)</span>
 
@@ -732,7 +733,7 @@ Computing history is characterized by the progressive abstraction of computer in
 
 ---
 
-**Page 29**
+**Page 28**
 
 ## <span style="color:#2874A6">C++ Program Build and Execution Pipeline</span>
 
@@ -756,7 +757,7 @@ At this point, you need not be too concerned with the details of this program. H
 
 ---
 
-**Page 30**
+**Page 29**
 
 ## <span style="color:#2874A6">C++ Build and Execution Lifecycle</span>
 
@@ -782,15 +783,15 @@ As a developer, your primary responsibility is mastering the language's syntax a
 
 ---
 
-**Page 31**
+**Page 30**
 
 الدورة الكاملة لحياة برنامج C++ (The C++ Build Lifecycle)
 
-تعتمد وحدة المعالجة المركزية (**CPU**) في عملها حصراً على لغة الآلة المكونة من سلاسل ثنائية؛ لذا فإن الأسطر البرمجية المكتوبة بلغة ++C لا يمكن تنفيذها بصورتها النصية المباشرة، بل تخضع لسلسلة تحويلات هندسية متتابعة تمر بست مراحل محددة لإنتاج ملف تنفيذي مستقر داخل الذاكرة الرئيسية.
+تعتمد وحدة المعالجة المركزية (**CPU**) في عملها حصراً على لغة الآلة المكونة من سلاسل ثنائية؛ لذا فإن الأسطر البرمجية المكتوبة بلغة C++ لا يمكن تنفيذها بصورتها النصية المباشرة، بل تخضع لسلسلة تحويلات هندسية متتابعة تمر بست مراحل محددة لإنتاج ملف تنفيذي مستقر داخل الذاكرة الرئيسية.
 
 #### <span style="color:#6C3483">1. مرحلة التحرير وإنشاء الكود المصدري (Editing & Source Code)</span>
 
-تبدأ الدورة عندما يستخدم المبرمج محرر نصوص (Text Editor) لكتابة التعليمات البرمجية وفق القواعد النحوية والصياغية (Syntax) الصارمة للغة ++C. الملف الناتج في هذه المرحلة هو ملف نصي عادي (Text File) يحمل الامتداد القياسي .cpp ويُعرف برمجياً بـ "الكود المصدري" (**Source Code**). هذا الملف يستقر ساكناً على وسائط التخزين الثانوي (كالقرص الصلب أو SSD)، ولا يمتلك أي صفة تشغيلية؛ إذ يقتصر دوره على التعبير المنطقي عما يريده المبرمج دون أن يفهم المعالج أياً من أحرفه.
+تبدأ الدورة عندما يستخدم المبرمج محرر نصوص (Text Editor) لكتابة التعليمات البرمجية وفق القواعد النحوية والصياغية (Syntax) الصارمة للغة C++. الملف الناتج في هذه المرحلة هو ملف نصي عادي (Text File) يحمل الامتداد القياسي .cpp ويُعرف برمجياً بـ "الكود المصدري" (**Source Code**). هذا الملف يستقر ساكناً على وسائط التخزين الثانوي (كالقرص الصلب أو SSD)، ولا يمتلك أي صفة تشغيلية؛ إذ يقتصر دوره على التعبير المنطقي عما يريده المبرمج دون أن يفهم المعالج أياً من أحرفه.
 
 #### <span style="color:#6C3483">2. مرحلة المعالجة المسبقة (Preprocessing)</span>
 
@@ -798,11 +799,11 @@ As a developer, your primary responsibility is mastering the language's syntax a
 
 #### <span style="color:#6C3483">3. مرحلة الترجمة وتوليد الكود الغرضي (Compilation)</span>
 
-- **يستلم "المترجم" (Compiler) الكود المصدري الموسع ليتولى مهمتين جوهريتين:** الأولى هي التدقيق النحوي (Syntax Checking) للتأكد التام من مطابقة الكود لقواعد لغة ++C واكتشاف أي أخطاء شكلية كنسيان الفواصل المنقوطة أو استخدام متغيرات غير معلنة، حيث يُوقف عملية البناء فوراً إذا وُجد أي خلل صياغي. أما المهمة الثانية، فتتمثل في ترجمة التعليمات السليمة نحوياً إلى لغة الآلة الخاصة بالمعالج المستهدف. يُحفظ الناتج في ملف وسيط يسمى "البرنامج الغرضي" (Object Program) ويحمل الامتداد .obj (أو .o في أنظمة لينكس). هذا الملف، رغم احتوائه على شفرات ثنائية، يظل غير قابل للتشغيل إطلاقاً؛ لاحتوائه على استدعاءات خارجية معلقة وفجوات برمجية لوظائف لم يكتب المبرمج تفاصيلها العتادية بنفسه (مثل آليات الطباعة وعرض المحارف).
+- **يستلم "المترجم" (Compiler) الكود المصدري الموسع ليتولى مهمتين جوهريتين:** الأولى هي التدقيق النحوي (Syntax Checking) للتأكد التام من مطابقة الكود لقواعد لغة C++ واكتشاف أي أخطاء شكلية كنسيان الفواصل المنقوطة أو استخدام متغيرات غير معلنة، حيث يُوقف عملية البناء فوراً إذا وُجد أي خلل صياغي. أما المهمة الثانية، فتتمثل في ترجمة التعليمات السليمة نحوياً إلى لغة الآلة الخاصة بالمعالج المستهدف. يُحفظ الناتج في ملف وسيط يسمى "البرنامج الغرضي" (Object Program) ويحمل الامتداد .obj (أو .o في أنظمة لينكس). هذا الملف، رغم احتوائه على شفرات ثنائية، يظل غير قابل للتشغيل إطلاقاً؛ لاحتوائه على استدعاءات خارجية معلقة وفجوات برمجية لوظائف لم يكتب المبرمج تفاصيلها العتادية بنفسه (مثل آليات الطباعة وعرض المحارف).
 
 ---
 
-**Page 32**
+**Page 31**
 
 #### <span style="color:#6C3483">4. مرحلة الربط وتوليد الملف التنفيذي (Linking)</span>
 
@@ -822,7 +823,7 @@ As a developer, your primary responsibility is mastering the language's syntax a
 
 ---
 
-**Page 33**
+**Page 32**
 
 ## <span style="color:#2874A6">Problem Analysis, Coding, and Execution Cycle</span>
 
@@ -840,7 +841,7 @@ A critical distinction in software development lies between syntax errors and lo
 
 ---
 
-**Page 34**
+**Page 33**
 
 #### <span style="color:#6C3483">منهجية حل المشكلات: دورة التحليل والتنفيذ (The Problem Analysis–Coding–Execution Cycle)</span>
 
@@ -882,7 +883,7 @@ A critical distinction in software development lies between syntax errors and lo
 
 ---
 
-**Page 35**
+**Page 34**
 
 #### <span style="color:#6C3483">Applied Example: Session Fee & Average Score Calculation</span>
 
@@ -908,7 +909,7 @@ To demonstrate the problem analysis, algorithm design, and implementation cycle 
 
 ---
 
-**Page 36**
+**Page 35**
 
 #### <span style="color:#6C3483">مثال تطبيقي بديل: حساب متوسط درجتين وتكلفة جلسة بالساعة (Applied Example)</span>
 
@@ -950,7 +951,7 @@ To demonstrate the problem analysis, algorithm design, and implementation cycle 
 
 ---
 
-**Page 37**
+**Page 36**
 
 ```cpp
 #include <iostream>
@@ -985,9 +986,13 @@ int main() {
 
 ---
 
-**Page 38**
+**Page 37**
 
 ## <span style="color:#2874A6">10 algorithm examples</span>
+
+The following ten examples demonstrate the **Problem Analysis -> Algorithm Design** workflow across real-world scenarios involving sequential arithmetic, conditional branching (`if / else`), and iterative loops (`while` / `for`). Each example defines its inputs, processing rules, and outputs before expressing the step-by-step logic in language-independent pseudocode.
+
+توضح الأمثلة العشرة التالية تطبيق دورة **تحليل المشكلة ثم تصميم الخوارزمية** على سيناريوهات عملية متنوعة تشمل العمليات الحسابية المتسلسلة، التفرع الشرطي (`if / else`)، والحلقات التكرارية (`while` / `for`) قبل البدء بكتابة كود C++.
 
 ### <span style="color:#117864">1. Monthly Server Bandwidth Cost</span>
 
@@ -1026,7 +1031,7 @@ int main() {
 
 ---
 
-**Page 39**
+**Page 38**
 
 ### <span style="color:#117864">3. Warehouse Package Shipping Fee</span>
 
@@ -1060,7 +1065,7 @@ int main() {
 
 ---
 
-**Page 40**
+**Page 39**
 
 ### <span style="color:#117864">5. Ride-Share Trip Fare Calculator</span>
 
@@ -1093,7 +1098,7 @@ int main() {
 
 ---
 
-**Page 41**
+**Page 40**
 
 ### <span style="color:#117864">7. Inventory Reorder Point Check</span>
 
@@ -1126,7 +1131,7 @@ int main() {
 
 ---
 
-**Page 42**
+**Page 41**
 
 ### <span style="color:#117864">9. Target Savings Milestone Counter</span>
 
@@ -1162,7 +1167,7 @@ int main() {
 
 ---
 
-**Page 43**
+**Page 42**
 
 ## <span style="color:#2874A6">Programming Methodologies and ANSI/ISO Standard C++</span>
 
@@ -1172,90 +1177,59 @@ int main() {
 
 Structured design breaks a complex problem into smaller, manageable subproblems, analyzes and solves each subproblem independently, and combines those partial solutions into a complete solution. Implementing this structured design is known as structured programming, and the approach is also referred to as top-down design, bottom-up design, stepwise refinement, or modular programming. It is particularly effective for numerical computations and mathematical problem-solving where steps can be decomposed cleanly and supported by built-in library routines.
 
+- **البرمجة الهيكلية (Structured Programming):** تقوم على تقسيم المشكلة الكبيرة إلى مشكلات فرعية (`Subproblems`) أصغر يسهل تحليلها وحلها بشكل مستقل، ثم دمج حلولها للوصول إلى الحل الكلي:
+  - **التسميات المرتبطة:** التصميم الهيكلي (**Structured Design**)، التصميم من الأعلى للأسفل (**Top-Down Design**)، التصميم من الأسفل للأعلى (**Bottom-Up Design**)، التنقيح التدريجي (**Stepwise Refinement**)، والبرمجة المعيارية (**Modular Programming**).
+  - **مجال الاستخدام:** فعّالة جداً في المسائل الحسابية والرياضية ومعالجة مجموعات الأرقام بالاعتماد على الخطوات المتسلسلة والدوال الجاهزة في مكتبات C++.
+
 ### <span style="color:#117864">Object-Oriented Programming (OOP)</span>
 
 Object-oriented design (OOD) centers the problem-solving process on identifying objects—the core entities that model the domain—and defining how they interact. Each object encapsulates both relevant data (state/attributes) and the operations (behaviors/methods) acting on that data within a single unit. For example, in a video store rental system, key objects include a video and a customer. A video object's data may include movie title, starring actors, producer, production company, and available copy count, while its operations may include inspecting the title, decrementing available copies upon rental, and incrementing available copies upon return. Languages designed to support OOD are object-oriented programming (**OOP**) languages, such as C++, which bundles data and operations into a single unit using a class. OOD is especially well-suited for modeling real-world systems—such as an automated candy machine—and often pairs naturally with structured design.
+
+- **البرمجة كائنية التوجه (Object-Oriented Programming - OOP):** تعتمد منهجية **التصميم كائني التوجه (`Object-Oriented Design - OOD`)** على نمذجة النظام كمنظومة من **الكائنات (`Objects`)** المتفاعلة، حيث يجمع كل كائن في وحدة واحدة متماسكة بين **البيانات (`Data`)** (خصائص الكائن وحالته) و**العمليات (`Operations`)** (الإجراءات والسلوكيات المطبقة عليه):
+  - **مثال تطبيقي (نظام تأجير الفيديو):** كائن الفيديو (`Video`) يضم بيانات (اسم الفيلم، الممثلون، المنتج، شركة الإنتاج، وعدد النسخ المتوفرة) وعمليات (الاستعلام عن الاسم، إنقاص النسخ عند الاستئجار، وزيادتها عند الإرجاع).
+  - **في C++:** تدعم C++ البرمجة الكائنية عبر آلية **الصف (`Class`)** لدمج البيانات والعمليات، وتبرز قوتها في نمذجة الأنظمة الواقعية وتتكامل مع التصميم الهيكلي.
+
+---
+
+**Page 43**
 
 ### <span style="color:#117864">Building Blocks Before Object-Oriented Design</span>
 
 Because objects combine data and operations, effective OOD requires foundational mastery of data representation, memory manipulation, control flow, and modular subprograms. In this curriculum progression, early chapters introduce basic data types, memory representation, and input/output; subsequent chapters cover control structures (selection for decision-making and repetition for condition-controlled loops), functions for organizing and reusing algorithm operations, and arrays for handling collections of elements of the same type. Once these core constructs are established using structured programming, the focus shifts to classes, data abstraction, and full OOD.
 
----
-
-**Page 44**
+- **التسلسل التمهيدي قبل تطبيق OOD:** لأن الكائن يجمع بين البيانات والعمليات، يتطلب إتقان التصميم الكائني بناء الأساس عبر المراحل التالية:
+  1. **تمثيل البيانات والإدخال والإخراج:** فهم أنواع البيانات الأساسية في C++ وتنظيمها في الذاكرة.
+  2. **هياكل التحكم (`Control Structures`):** إتقان **الاختيار (`Selection`)** لاتخاذ القرارات و**التكرار (`Repetition`)** للحلقات الشرطية.
+  3. **الدوال والمصفوفات (`Functions & Arrays`):** فصل العمليات في دوال قابلة لإعادة الاستخدام وتنظيم مجموعات البيانات المتجانسة في مصفوفات.
+  4. **الانتقال إلى `Classes` و`OOD`:** دمج البيانات والعمليات داخل الصفوف وتطبيق التصميم الكائني الكامل.
 
 ### <span style="color:#117864">ANSI/ISO Standard C++</span>
 
 C++ evolved from C, designed by Bjarne Stroustrup at Bell Laboratories in the early 1980s. During the 1980s and early 1990s, multiple C++ compilers emerged with slight variations in how language features evolved, which occasionally hindered portability across compilers. To establish a uniform specification, a joint committee of the American National Standards Institute (ANSI) and the International Organization for Standardization (ISO) standardized the language, approving the ANSI/ISO C++ standard in mid-1998. Modern compilers largely conform to this standard, which forms the baseline for standard C++ syntax in this course.
 
-**منهجيات البرمجة ومعيار** ANSI/ISO **للغة** C++ **(**Programming Methodologies & Standardization**)**
-
-يستعرض هذا القسم المنهجيتين الرئيسيتين في تصميم البرمجيات، والأساس المعياري الذي يضمن توحيد قواعد لغة C++ عبر المترجمات المختلفة:
-
-**1. البرمجة الهيكلية (Structured Programming)**
-
-هي المنهجية القائمة على تقسيم المشكلة الكبيرة إلى مشكلات فرعية (Subproblems) أصغر يسهل تحليلها وحلها بشكل مستقل، ثم دمج حلول هذه الأجزاء للوصول إلى الحل الكلي للبرنامج:
-
-- **المبدأ الأساسي:** تجزئة التعقيد وفق مبدأ Divide and Conquer وحل كل جزء بوضوح ثم تجميع النتائج.
-
-- **المصطلحات المرتبطة بالمنهجية:** يرتبط هذا النهج بعدة تسميات متداولة في الأدبيات الهندسية، من أبرزها:
-
-- **التصميم الهيكلي (**Structured Design**)**.
-
-- **التصميم من الأعلى للأسفل (**Top-down Design**)**.
-
-- **التصميم من الأسفل للأعلى (**Bottom-up Design**)**.
-
-- **التنقيح التدريجي (**Stepwise Refinement**)**.
-
-- **البرمجة المعيارية / المجزأة (**Modular Programming**)**.
-
-- **مجال الاستخدام:** فعّالة جداً في المسائل الحسابية والرياضية ومعالجة مجموعات الأرقام بالاعتماد على الخطوات المتسلسلة والدوال الجاهزة في مكتبات C++.
-
----
-
-**Page 45**
-
-**2. البرمجة كائنية التوجه (Object-Oriented Programming - OOP)**
-
-تعتمد منهجية **التصميم كائني التوجه (**Object-Oriented Design - OOD**)** على نمذجة النظام كمنظومة من **الكائنات (**Objects**)** المتفاعلة فيما بينها، حيث يجمع كل كائن في وحدة واحدة متماسكة بين:
-
-- **البيانات (**Data**):** الخصائص والحالة التي تصف الكائن.
-
-- **العمليات (**Operations**):** الإجراءات والسلوكيات التي تُنفَّذ على بيانات ذلك الكائن.
-
-- **مثال نظام تأجير الفيديو (**Video Store Example**):** يمكن تمثيل النظام عبر كائنات رئيسية مثل كائن الفيديو (Video) وكائن العميل (Customer)؛ فكائن الفيديو يضم بيانات مثل اسم الفيلم، الممثلين الرئيسيين، المنتج، شركة الإنتاج، وعدد النسخ المتوفرة، ويضم عمليات مثل التحقق من اسم الفيلم، إنقاص عدد النسخ المتوفرة عند الاستئجار، وزيادة عدد النسخ عند الإرجاع.
-
-- **الارتباط بـ** C++ **ومجال الاستخدام:** تُعد C++ لغة كائنية التوجه (**OOP**) وتوفر آلية **الصف (**Class**)** لدمج البيانات والعمليات في وحدة واحدة. وتبرز فعالية OOD بشكل خاص في تمثيل الأنظمة الواقعية (مثل آلة بيع الحلويات Candy Machine)، كما تتكامل عملياً مع التصميم الهيكلي.
-
-**3. التسلسل التمهيدي قبل تطبيق** OOD
-
-نظراً لأن الكائن يجمع بين البيانات والعمليات، فإن تصميم الكائنات واستخدامها بفعالية يتطلب بناء الأساس اللغوي والمنطقي أولاً عبر المراحل التالية:
-
-- **تمثيل البيانات ومعالجتها والإدخال والإخراج:** فهم أنواع البيانات الأساسية في C++ وكيفية تمثيلها في الذاكرة وإدخال البيانات وعرض النتائج.
-
-- **هياكل التحكم (**Control Structures**):** إتقان آليات **الاختيار (**Selection**)** لاتخاذ القرارات، و**التكرار (**Repetition**)** لتنفيذ العمليات حتى تحقق شروط محددة، أو الجمع بينهما في الخوارزميات.
-
-- **الدوال والمصفوفات (**Functions & Arrays**):** استخدام **الدوال (**Functions**)** لفصل العمليات وتنظيم الخوارزميات وتسهيل استدعائها، واستخدام **المصفوفات (**Arrays**)** للتعامل مع مجموعات من البيانات المتجانسة من النوع نفسه (مثل قائمة أرقام المبيعات).
-
-- **الانتقال إلى** Classes **و** OOD**:** بعد ترسيخ هذه الأساسيات بأسلوب البرمجة الهيكلية، يتم الانتقال إلى تجميع البيانات والعمليات في وحدة واحدة عبر الصفوف (Classes) وتطبيق OOD.
-
-**4. معيار اللغة (**ANSI/ISO Standard C++**)**
-
-- **النشأة والتطور:** تطورت C++ من لغة C على يد **بيارن ستروستروب (**Bjarne Stroustrup**)** في مختبرات **بيل (**Bell Laboratories**)** في أوائل الثمانينات.
-
----
-
-**Page 46**
-
-- **مشكلة تعدد المترجمات:** مع ظهور عدة مترجمات لـ C++ خلال الثمانينات وأوائل التسعينات، تطورت بعض التفاصيل بشكل طفيف بين مترجم وآخر، مما أثر أحياناً على قابلية نقل البرامج (**Portability**) بين بيئات التطوير المختلفة.
-
-- **التوحيد القياسي:** في أوائل التسعينات، شُكّلت لجنة مشتركة من المعهد الوطني الأمريكي للمعايير (ANSI) والمنظمة الدولية للمعايير (ISO) لتوحيد قواعد اللغة، وتم اعتماد معيار ANSI/ISO C++ في منتصف عام 1998، وهو المعيار الذي تلتزم به أغلب المترجمات الحديثة وتعتمد عليه قواعد اللغة في هذا المنهج.
-
-#### <span style="color:#6C3483">ملاحظة منهجية للمسار الدراسي</span>
-
-- **المنهج يبني قدراتك تدريجياً:** يبدأ بتأسيس التفكير المنطقي والهيكلي (Structured) في تمثيل البيانات والتحكم بالتدفق والدوال والمصفوفات، لكي تكون جاهزاً عند الوصول إلى الصفوف (Classes) والكائنات (Objects) لدمج البيانات مع عملياتها ضمن تصميم كائني متماسك.
+- **النشأة والتطور:** تطورت C++ من لغة C على يد **بيارن ستروستروب (`Bjarne Stroustrup`)** في مختبرات بيل (**Bell Laboratories**) في أوائل الثمانينات.
+- **مشكلة تعدد المترجمات:** أدى تعدد المترجمات في الثمانينات وأوائل التسعينات إلى اختلافات طفيفة أثّرت على قابلية نقل البرامج (**Portability**) بين بيئات التطوير.
+- **التوحيد القياسي (1998):** شكّلت هيئتا **ANSI** و**ISO** لجنة مشتركة لتوحيد قواعد اللغة، واعُتمد معيار **ANSI/ISO C++** في منتصف عام `1998`، وهو الأساس القياسي الذي تلتزم به المترجمات الحديثة.
 
 <p align="center">
   <img src="assets/image26.png" alt="Programming Methodologies and ANSI/ISO C++" />
 </p>
+
+---
+
+**Page 44**
+
+## <span style="color:#2874A6">Chapter 01 Summary & Key Takeaways</span>
+
+- **Hardware-Software Interplay:** A computer system combines physical hardware (**CPU**, **RAM**, **Secondary Storage**, and **I/O Devices**) with **System** and **Application Software**; neither functions usefully without the other.
+- **CPU & Memory Execution:** The **Control Unit (CU)** fetches instructions from **RAM** into high-speed **Registers**, while the **ALU** executes arithmetic and logic operations. **RAM** is fast and byte-addressable ($O(1)$ access via the **Address Decoder**), but volatile; **Secondary Storage** is non-volatile and persistent.
+- **Binary & Encoding:** Digital hardware operates on binary voltage states (`0` and `1`). Eight bits form a **Byte** ($2^8 = 256$ states), and standards such as **ASCII** (7-bit padded to 8-bit) and **Unicode** map human characters to numeric codes.
+- **C++ Build Pipeline:** C++ source code passes through the **Preprocessor**, **Compiler** (generating object code), **Linker** (resolving libraries into an executable), and **Loader** (placing the program into **RAM** for execution).
+- **Methodologies & Standard:** **Structured Programming** decomposes problems into modular functions, while **OOP** encapsulates data and operations inside **Classes** and **Objects**, standardized under **ANSI/ISO C++**.
+
+**الخلاصة الهندسية للفصل الأول:**
+
+- يقوم الحاسوب على تكامل العتاد (**CPU**, **RAM**, **Secondary Storage**, **I/O**) مع البرمجيات (**System** و **Application Software**).
+- المعالج يجلب التعليمات من الذاكرة العشوائية المتطايرة (**RAM**) عبر نواقل النظام، بينما يحفظ التخزين الثانوي البيانات بشكل دائم (**Non-Volatile**).
+- يمر برنامج C++ بدورة بناء متكاملة: **المعالج الأولي (Preprocessor)** ثم **المترجم (Compiler)** ثم **الرابط (Linker)** ثم **المحمّل (Loader)** قبل التنفيذ الفعلي.
+- تأسيس التفكير الهيكلي (**Structured Programming**) يمهّد للانتقال المنطقي إلى البرمجة كائنية التوجه (**OOP**) وفق معيار **ANSI/ISO C++**.
